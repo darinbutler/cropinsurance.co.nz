@@ -127,7 +127,7 @@ export default function GrowersIndexPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <span className="inline-block px-3 py-1 bg-amber-100 text-amber-800 text-xs font-semibold rounded-full uppercase tracking-wider mb-3">Why it matters</span>
-            <h2 className="text-3xl font-bold text-gray-900">Why NZ Growers Need Crop Insurance</h2>
+            <h2 className="text-3xl font-bold text-gray-900">Why Growers Need Crop Insurance</h2>
             <p className="text-gray-500 mt-2 max-w-2xl mx-auto text-sm">New Zealand&apos;s climate and export-dependent economy make crop insurance more than a nice-to-have for many operations.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -148,7 +148,7 @@ export default function GrowersIndexPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-gray-900">Types of Crop Cover Available in NZ</h2>
+            <h2 className="text-3xl font-bold text-gray-900">Types of Crop Cover Available</h2>
             <p className="text-gray-500 mt-2 max-w-xl mx-auto text-sm">Not all crop insurance is the same. Understanding the structure helps you choose the right policy for your risk profile.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">

@@ -67,7 +67,7 @@ export default function HomePage() {
               <span className="inline-block px-3 py-1 bg-green-400/20 border border-green-400/30 text-green-200 text-xs font-semibold rounded-full uppercase tracking-wider mb-4">NZ Specialist Crop Brokers</span>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
                 Crop Insurance<br />
-                <span className="text-green-400">for Every NZ Grower</span>
+                <span className="text-green-400">for Every Grower</span>
               </h1>
               <p className="mt-5 text-lg text-green-100 leading-relaxed max-w-xl">
                 From kiwifruit orchards in the Bay of Plenty to vineyards in Marlborough and grain farms in Canterbury — our specialist brokers compare multiple insurers to save you time and normally money.
@@ -139,7 +139,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <span className="inline-block px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full uppercase tracking-wider mb-3">Why CropInsurance.co.nz</span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">NZ's Specialist Crop Insurance Brokers</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Specialist Crop Insurance Brokers</h2>
               <div className="space-y-5">
                 {[
                   { icon: '🌾', title: 'Deep NZ Crop Expertise', desc: 'Our broker network understands NZ growing conditions, regional risks, and the specific insurance needs of orchardists, vine growers, and arable farmers.' },

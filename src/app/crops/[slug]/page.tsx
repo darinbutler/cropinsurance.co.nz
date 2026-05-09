@@ -69,7 +69,7 @@ export default async function CropPage({ params }: { params: Promise<{ slug: str
             <span className="text-5xl drop-shadow-lg">{crop.icon}</span>
             <span className="inline-block px-3 py-1 bg-green-600 text-white text-xs font-bold rounded-full uppercase tracking-wider">NZ Specialist Cover</span>
           </div>
-          <h1 className="text-4xl sm:text-6xl font-extrabold text-white leading-tight max-w-3xl">{crop.name} in New Zealand</h1>
+          <h1 className="text-4xl sm:text-6xl font-extrabold text-white leading-tight max-w-3xl">{crop.name}</h1>
           <p className="mt-4 text-lg text-green-200 max-w-2xl leading-relaxed">{crop.description}</p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link href="/contact/" className="px-6 py-3 bg-green-500 hover:bg-green-400 text-white font-bold rounded-xl transition-colors text-sm shadow-lg">
@@ -172,7 +172,7 @@ export default async function CropPage({ params }: { params: Promise<{ slug: str
 
               {/* Authority: How crop insurance works */}
               <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-5">How {crop.shortName} Insurance Works in NZ</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-5">How {crop.shortName} Insurance Works</h2>
                 <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
                   <p>Crop insurance in New Zealand operates through specialist rural brokers who place cover with admitted insurers including FMG (Farmers Mutual Group), Gallagher, Aon, Farmcover, and Howden. Unlike some markets, NZ does not have a government-backed crop insurance scheme — all cover is placed privately, which means the quality and breadth of policy can vary significantly between insurers.</p>
                   <p>For {crop.shortName.toLowerCase()} growers, cover is typically structured as either <strong className="text-gray-800">named perils</strong> (covering specific events like hail, frost, or fire) or <strong className="text-gray-800">multi-peril crop insurance (MPCI)</strong>, which provides broader protection including yield shortfalls from a wide range of causes. Named perils cover is more affordable and suits growers whose primary risk is a defined weather event. MPCI is better suited to larger operations or those with complex, varied risk profiles.</p>
