@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Script from 'next/script';
 
 interface QuoteFormProps {
   variant?: 'hero' | 'sidebar' | 'full';
@@ -28,8 +29,18 @@ export default function QuoteForm({ variant = 'hero', cropType = '' }: QuoteForm
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setState('submitting');
     setError('');
+
+    const formEl = e.currentTarget;
+    const fd = new FormData(formEl);
+    const cfToken = fd.get('cf-turnstile-response');
+    if (!cfToken) {
+      setState('error');
+      setError('Please complete the security check.');
+      return;
+    }
+
+    setState('submitting');
 
     try {
       const payload = {
@@ -40,6 +51,7 @@ export default function QuoteForm({ variant = 'hero', cropType = '' }: QuoteForm
         region: formData.region,
         cropValue: formData.cropValue,
         message: formData.message,
+        cfTurnstileToken: cfToken,
       };
 
       const response = await fetch(WORKER_URL, {
@@ -163,6 +175,11 @@ export default function QuoteForm({ variant = 'hero', cropType = '' }: QuoteForm
         </div>
 
         {error && <p className="text-sm text-red-600 text-center">{error}</p>}
+
+        <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer strategy="afterInteractive" />
+        <div className="flex justify-center">
+          <div className="cf-turnstile" data-sitekey="0x4AAAAAADMnq1OKyxf3JvVv" data-theme="light" />
+        </div>
 
         <button
           type="submit"
