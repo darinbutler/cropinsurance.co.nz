@@ -61,7 +61,7 @@ export default function ContactPage() {
             <Link href="/" className="hover:text-white">Home</Link><span>/</span>
             <span className="text-white">Contact</span>
           </nav>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-3">Get Your Free Crop Insurance Quote</h1>
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-3">Get Your Crop Insurance Quote</h1>
           <p className="text-green-200 text-lg max-w-xl">We do the hard work — comparing FMG, Gallagher, Aon, Farmcover and more so you get the right cover at the right price. Free, no obligation, fast turnaround.</p>
         </div>
       </section>
