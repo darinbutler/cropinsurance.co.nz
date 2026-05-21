@@ -192,7 +192,7 @@ Given the complexity of kiwifruit insurance — with its combination of disease 
     publishDate: '2026-03-15',
     readTime: 9,
     category: 'Crop Guides',
-    heroImage: 'https://images.unsplash.com/photo-1474675173826-71f5575ecd23?w=1200&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1504279577054-acfeccf8fc52?w=1200&q=80',
     author: { name: 'James Harrington', role: 'Agricultural Insurance Adviser', avatar: '' },
     tags: ['vineyard insurance', 'frost', 'Marlborough', "Hawke's Bay", 'viticulture'],
     content: `## Why Frost Is the Biggest Single Risk for NZ Vine Growers
