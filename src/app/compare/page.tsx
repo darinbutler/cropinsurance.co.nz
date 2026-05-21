@@ -6,7 +6,7 @@ import QuoteForm from '@/components/QuoteForm';
 export const metadata: Metadata = {
   title: 'Compare Crop Insurance Providers NZ | FMG vs Gallagher vs Aon | CropInsurance.co.nz',
   description: 'Compare NZ crop insurance providers side by side — FMG, Gallagher, Aon, Farmcover and Howden. Coverage, ratings, and what each insurer does best.',
-  alternates: { canonical: 'https://cropinsurance.co.nz/compare/' },
+  alternates: { canonical: 'https://www.cropinsurance.co.nz/compare/' },
 };
 
 function ScoreBar({ score, color = 'green' }: { score: number; color?: string }) {
@@ -40,12 +40,12 @@ const compareSchema = {
   '@type': 'WebPage',
   name: 'Compare Crop Insurance Providers NZ',
   description: 'Compare NZ crop insurance providers side by side — FMG, Gallagher, Aon, Farmcover and Howden. Coverage, ratings, and what each insurer does best.',
-  url: 'https://cropinsurance.co.nz/compare/',
+  url: 'https://www.cropinsurance.co.nz/compare/',
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cropinsurance.co.nz/' },
-      { '@type': 'ListItem', position: 2, name: 'Compare Providers', item: 'https://cropinsurance.co.nz/compare/' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.cropinsurance.co.nz/' },
+      { '@type': 'ListItem', position: 2, name: 'Compare Providers', item: 'https://www.cropinsurance.co.nz/compare/' },
     ],
   },
 };

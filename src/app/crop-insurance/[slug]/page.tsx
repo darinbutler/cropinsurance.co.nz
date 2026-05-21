@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: page.metaTitle,
     description: page.metaDescription,
-    alternates: { canonical: `https://cropinsurance.co.nz/crop-insurance/${page.slug}/` },
+    alternates: { canonical: `https://www.cropinsurance.co.nz/crop-insurance/${page.slug}/` },
   };
 }
 

@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Making a Crop Insurance Claim NZ | CropInsurance.co.nz',
   description: 'How to make a crop insurance claim in New Zealand. Step-by-step guide, insurer contacts, complaints process, and ICNZ Fair Code information.',
-  alternates: { canonical: 'https://cropinsurance.co.nz/claims/' },
+  alternates: { canonical: 'https://www.cropinsurance.co.nz/claims/' },
 };
 
 const howToSchema = {
@@ -27,8 +27,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cropinsurance.co.nz/' },
-    { '@type': 'ListItem', position: 2, name: 'Claims Guide', item: 'https://cropinsurance.co.nz/claims/' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.cropinsurance.co.nz/' },
+    { '@type': 'ListItem', position: 2, name: 'Claims Guide', item: 'https://www.cropinsurance.co.nz/claims/' },
   ],
 };
 

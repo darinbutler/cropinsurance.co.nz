@@ -6,7 +6,7 @@ import QuoteForm from '@/components/QuoteForm';
 export const metadata: Metadata = {
   title: 'Crop Insurance by Grower Type NZ | Orchardists, Viticulture, Arable & More | CropInsurance.co.nz',
   description: 'Find specialist crop insurance for orchardists, viticulture growers, arable farmers, hop growers, vegetable growers and contract growers in New Zealand. Compare FMG, Gallagher, Aon and more.',
-  alternates: { canonical: 'https://cropinsurance.co.nz/growers/' },
+  alternates: { canonical: 'https://www.cropinsurance.co.nz/growers/' },
 };
 
 const growerStats = [

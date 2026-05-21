@@ -5,7 +5,7 @@ import { blogPosts } from '@/data/blog-posts';
 export const metadata: Metadata = {
   title: 'Crop Insurance Blog & Guides NZ | CropInsurance.co.nz',
   description: 'Expert guides on crop insurance for NZ growers. Kiwifruit, vineyard, arable, and horticulture insurance explained by specialist advisers.',
-  alternates: { canonical: 'https://cropinsurance.co.nz/blog/' },
+  alternates: { canonical: 'https://www.cropinsurance.co.nz/blog/' },
 };
 
 export default function BlogIndexPage() {

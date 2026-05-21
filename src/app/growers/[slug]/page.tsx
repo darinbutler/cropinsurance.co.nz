@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${grower.name} | Crop Insurance NZ | CropInsurance.co.nz`,
     description: grower.description,
-    alternates: { canonical: `https://cropinsurance.co.nz/growers/${grower.slug}/` },
+    alternates: { canonical: `https://www.cropinsurance.co.nz/growers/${grower.slug}/` },
   };
 }
 
@@ -29,9 +29,9 @@ export default async function GrowerPage({ params }: { params: Promise<{ slug: s
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cropinsurance.co.nz/' },
-      { '@type': 'ListItem', position: 2, name: 'Grower Types', item: 'https://cropinsurance.co.nz/growers/' },
-      { '@type': 'ListItem', position: 3, name: grower.name, item: `https://cropinsurance.co.nz/growers/${grower.slug}/` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.cropinsurance.co.nz/' },
+      { '@type': 'ListItem', position: 2, name: 'Grower Types', item: 'https://www.cropinsurance.co.nz/growers/' },
+      { '@type': 'ListItem', position: 3, name: grower.name, item: `https://www.cropinsurance.co.nz/growers/${grower.slug}/` },
     ],
   };
 
@@ -43,7 +43,7 @@ export default async function GrowerPage({ params }: { params: Promise<{ slug: s
     provider: {
       '@type': 'Organization',
       name: 'CropInsurance.co.nz',
-      url: 'https://cropinsurance.co.nz',
+      url: 'https://www.cropinsurance.co.nz',
     },
     areaServed: { '@type': 'Country', name: 'New Zealand' },
     serviceType: 'Crop Insurance Broker Referral',

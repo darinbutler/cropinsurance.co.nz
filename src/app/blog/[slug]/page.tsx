@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${post.title} | CropInsurance.co.nz`,
     description: post.excerpt,
-    alternates: { canonical: `https://cropinsurance.co.nz/blog/${post.slug}/` },
+    alternates: { canonical: `https://www.cropinsurance.co.nz/blog/${post.slug}/` },
     openGraph: {
       title: post.title,
       description: post.excerpt,
@@ -127,21 +127,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     publisher: {
       '@type': 'Organization',
       name: 'CropInsurance.co.nz',
-      url: 'https://cropinsurance.co.nz',
-      logo: { '@type': 'ImageObject', url: 'https://cropinsurance.co.nz/favicon.svg' },
+      url: 'https://www.cropinsurance.co.nz',
+      logo: { '@type': 'ImageObject', url: 'https://www.cropinsurance.co.nz/favicon.svg' },
     },
     image: { '@type': 'ImageObject', url: post.heroImage },
-    url: `https://cropinsurance.co.nz/blog/${post.slug}/`,
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://cropinsurance.co.nz/blog/${post.slug}/` },
+    url: `https://www.cropinsurance.co.nz/blog/${post.slug}/`,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://www.cropinsurance.co.nz/blog/${post.slug}/` },
   };
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cropinsurance.co.nz/' },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://cropinsurance.co.nz/blog/' },
-      { '@type': 'ListItem', position: 3, name: post.title, item: `https://cropinsurance.co.nz/blog/${post.slug}/` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.cropinsurance.co.nz/' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.cropinsurance.co.nz/blog/' },
+      { '@type': 'ListItem', position: 3, name: post.title, item: `https://www.cropinsurance.co.nz/blog/${post.slug}/` },
     ],
   };
 

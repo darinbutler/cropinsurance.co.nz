@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Disclaimer | CropInsurance.co.nz',
   description: 'Important disclaimer about the nature of CropInsurance.co.nz as an insurance referral service. We are not an insurer or financial adviser.',
-  alternates: { canonical: 'https://cropinsurance.co.nz/disclaimer/' },
+  alternates: { canonical: 'https://www.cropinsurance.co.nz/disclaimer/' },
 };
 
 export default function DisclaimerPage() {

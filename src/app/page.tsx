@@ -12,7 +12,7 @@ import { faqs } from '@/data/faqs';
 export const metadata: Metadata = {
   title: 'Crop Insurance NZ | Compare Quotes for Every Crop | CropInsurance.co.nz',
   description: 'Compare crop insurance for kiwifruit, grapes, apples, wheat, hops and all NZ crops. Free quotes from FMG, Gallagher, Aon and more. Specialist broker advice — no obligation.',
-  alternates: { canonical: 'https://cropinsurance.co.nz/' },
+  alternates: { canonical: 'https://www.cropinsurance.co.nz/' },
 };
 
 const schema = {
@@ -20,28 +20,28 @@ const schema = {
   '@graph': [
     {
       '@type': ['Organization', 'InsuranceAgency'],
-      '@id': 'https://cropinsurance.co.nz/#organization',
+      '@id': 'https://www.cropinsurance.co.nz/#organization',
       name: 'CropInsurance.co.nz',
-      url: 'https://cropinsurance.co.nz',
+      url: 'https://www.cropinsurance.co.nz',
       description: 'NZ specialist crop insurance comparison and broker referral service',
       areaServed: 'NZ',
       email: 'hello@cover4you.co.nz',
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://cropinsurance.co.nz/#website',
-      url: 'https://cropinsurance.co.nz',
+      '@id': 'https://www.cropinsurance.co.nz/#website',
+      url: 'https://www.cropinsurance.co.nz',
       name: 'CropInsurance.co.nz',
-      publisher: { '@id': 'https://cropinsurance.co.nz/#organization' },
-      potentialAction: { '@type': 'SearchAction', target: 'https://cropinsurance.co.nz/blog/?q={search_term_string}', 'query-input': 'required name=search_term_string' },
+      publisher: { '@id': 'https://www.cropinsurance.co.nz/#organization' },
+      potentialAction: { '@type': 'SearchAction', target: 'https://www.cropinsurance.co.nz/blog/?q={search_term_string}', 'query-input': 'required name=search_term_string' },
     },
     {
       '@type': 'WebPage',
-      '@id': 'https://cropinsurance.co.nz/#webpage',
-      url: 'https://cropinsurance.co.nz/',
+      '@id': 'https://www.cropinsurance.co.nz/#webpage',
+      url: 'https://www.cropinsurance.co.nz/',
       name: 'Crop Insurance NZ | Compare Quotes for Every Crop',
-      isPartOf: { '@id': 'https://cropinsurance.co.nz/#website' },
-      about: { '@id': 'https://cropinsurance.co.nz/#organization' },
+      isPartOf: { '@id': 'https://www.cropinsurance.co.nz/#website' },
+      about: { '@id': 'https://www.cropinsurance.co.nz/#organization' },
     },
   ],
 };

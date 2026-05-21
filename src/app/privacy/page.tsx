@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Privacy Policy | CropInsurance.co.nz',
   description: 'Privacy policy for CropInsurance.co.nz — how we collect, use and protect your personal information in accordance with the Privacy Act 2020 (NZ).',
-  alternates: { canonical: 'https://cropinsurance.co.nz/privacy/' },
+  alternates: { canonical: 'https://www.cropinsurance.co.nz/privacy/' },
 };
 
 export default function PrivacyPage() {

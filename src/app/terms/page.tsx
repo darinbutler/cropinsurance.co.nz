@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Terms of Use | CropInsurance.co.nz',
   description: 'Terms of use for CropInsurance.co.nz — please read before using this website.',
-  alternates: { canonical: 'https://cropinsurance.co.nz/terms/' },
+  alternates: { canonical: 'https://www.cropinsurance.co.nz/terms/' },
 };
 
 export default function TermsPage() {

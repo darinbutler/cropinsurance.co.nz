@@ -5,7 +5,7 @@ import QuoteForm from '@/components/QuoteForm';
 export const metadata: Metadata = {
   title: 'Get a Free Crop Insurance Quote | Contact Us | CropInsurance.co.nz',
   description: 'Contact our specialist crop insurance brokers for a free, no-obligation quote. We compare FMG, Gallagher, Aon, Farmcover and more for NZ growers.',
-  alternates: { canonical: 'https://cropinsurance.co.nz/contact/' },
+  alternates: { canonical: 'https://www.cropinsurance.co.nz/contact/' },
 };
 
 export default function ContactPage() {

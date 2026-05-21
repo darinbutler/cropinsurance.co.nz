@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${crop.name} NZ | Compare Quotes | CropInsurance.co.nz`,
     description: crop.description,
-    alternates: { canonical: `https://cropinsurance.co.nz/crops/${crop.slug}/` },
+    alternates: { canonical: `https://www.cropinsurance.co.nz/crops/${crop.slug}/` },
   };
 }
 
@@ -42,9 +42,9 @@ export default async function CropPage({ params }: { params: Promise<{ slug: str
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cropinsurance.co.nz/' },
-      { '@type': 'ListItem', position: 2, name: 'Crop Insurance', item: 'https://cropinsurance.co.nz/crops/' },
-      { '@type': 'ListItem', position: 3, name: crop.name, item: `https://cropinsurance.co.nz/crops/${crop.slug}/` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.cropinsurance.co.nz/' },
+      { '@type': 'ListItem', position: 2, name: 'Crop Insurance', item: 'https://www.cropinsurance.co.nz/crops/' },
+      { '@type': 'ListItem', position: 3, name: crop.name, item: `https://www.cropinsurance.co.nz/crops/${crop.slug}/` },
     ],
   };
 

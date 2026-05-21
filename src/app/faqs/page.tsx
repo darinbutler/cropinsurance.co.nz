@@ -6,7 +6,7 @@ import QuoteForm from '@/components/QuoteForm';
 export const metadata: Metadata = {
   title: 'Crop Insurance FAQs NZ | Common Questions Answered | CropInsurance.co.nz',
   description: 'Answers to the most common crop insurance questions for NZ growers. Coverage, claims, costs, and more explained by specialist advisers.',
-  alternates: { canonical: 'https://cropinsurance.co.nz/faqs/' },
+  alternates: { canonical: 'https://www.cropinsurance.co.nz/faqs/' },
 };
 
 const categories = [...new Set(faqs.map(f => f.category))];
@@ -25,8 +25,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cropinsurance.co.nz/' },
-    { '@type': 'ListItem', position: 2, name: 'FAQs', item: 'https://cropinsurance.co.nz/faqs/' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.cropinsurance.co.nz/' },
+    { '@type': 'ListItem', position: 2, name: 'FAQs', item: 'https://www.cropinsurance.co.nz/faqs/' },
   ],
 };
 

@@ -5,7 +5,7 @@ import { cropTypes } from '@/data/crop-types';
 export const metadata: Metadata = {
   title: 'Crop Insurance Types NZ | All Crops Covered | CropInsurance.co.nz',
   description: 'Specialist crop insurance for kiwifruit, apples, grapes, wheat, hops, stone fruit, avocados, berries and more. Compare NZ crop insurance by crop type.',
-  alternates: { canonical: 'https://cropinsurance.co.nz/crops/' },
+  alternates: { canonical: 'https://www.cropinsurance.co.nz/crops/' },
 };
 
 export default function CropsIndexPage() {

@@ -5,7 +5,7 @@ import QuoteForm from '@/components/QuoteForm';
 export const metadata: Metadata = {
   title: 'About CropInsurance.co.nz | NZ Specialist Crop Insurance Brokers',
   description: 'CropInsurance.co.nz is a free broker referral service connecting NZ growers with specialist crop insurance advisers. Independent, transparent, free.',
-  alternates: { canonical: 'https://cropinsurance.co.nz/about/' },
+  alternates: { canonical: 'https://www.cropinsurance.co.nz/about/' },
 };
 
 export default function AboutPage() {
