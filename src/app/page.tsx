@@ -86,8 +86,10 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-            <div className="hidden lg:block">
-              <QuoteForm variant="hero" />
+            <div className="hidden lg:flex lg:justify-end">
+              <div className="w-[420px]">
+                <QuoteForm variant="hero" />
+              </div>
             </div>
           </div>
         </div>
