@@ -157,7 +157,7 @@ export default async function GrowerPage({ params }: { params: Promise<{ slug: s
                     </div>
                   </div>
                   <div
-                    className="prose prose-green max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-p:leading-relaxed prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-8 prose-h2:mb-4 prose-h3:text-lg prose-h3:font-bold prose-h3:mt-6 prose-h3:mb-3 prose-ul:space-y-1 prose-li:text-gray-600 prose-strong:text-gray-800"
+                    className="[&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-gray-900 [&_h2]:mt-8 [&_h2]:mb-4 [&_h2]:leading-tight [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:text-gray-900 [&_h3]:mt-6 [&_h3]:mb-3 [&_h4]:text-base [&_h4]:font-semibold [&_h4]:text-gray-800 [&_h4]:mt-4 [&_h4]:mb-2 [&_p]:text-gray-600 [&_p]:leading-relaxed [&_p]:mb-4 [&_ul]:list-disc [&_ul]:ml-6 [&_ul]:mb-4 [&_ul]:space-y-1 [&_ol]:list-decimal [&_ol]:ml-6 [&_ol]:mb-4 [&_ol]:space-y-1 [&_li]:text-gray-600 [&_li]:leading-relaxed [&_strong]:font-semibold [&_strong]:text-gray-800 [&_em]:italic [&_table]:w-full [&_table]:text-sm [&_table]:border-collapse [&_th]:text-left [&_th]:font-semibold [&_th]:text-gray-700 [&_th]:border-b [&_th]:border-gray-200 [&_th]:pb-2 [&_th]:pr-4 [&_td]:py-2 [&_td]:pr-4 [&_td]:text-gray-600 [&_td]:border-b [&_td]:border-gray-100 [&_hr]:border-gray-200 [&_hr]:my-6 [&>*:first-child]:mt-0"
                     dangerouslySetInnerHTML={{ __html: grower.longFormContent }}
                   />
                 </div>
