@@ -6,11 +6,53 @@ export const metadata: Metadata = {
   title: 'About CropInsurance.co.nz | NZ Specialist Crop Insurance Brokers',
   description: 'CropInsurance.co.nz is a free broker referral service connecting NZ growers with specialist crop insurance advisers. Independent, transparent, free.',
   alternates: { canonical: 'https://www.cropinsurance.co.nz/about/' },
+  openGraph: {
+    title: 'About CropInsurance.co.nz | NZ Specialist Crop Insurance Brokers',
+    description: 'CropInsurance.co.nz is a free broker referral service connecting NZ growers with specialist crop insurance advisers. Independent, transparent, free.',
+    url: 'https://www.cropinsurance.co.nz/about/',
+    siteName: 'CropInsurance.co.nz',
+    images: [{ url: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1200&q=80', width: 1200, height: 630, alt: 'About CropInsurance.co.nz' }],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About CropInsurance.co.nz | NZ Crop Insurance Brokers',
+    description: 'Free broker referral service connecting NZ growers with specialist crop insurance advisers.',
+    images: ['https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1200&q=80'],
+  },
+};
+
+const aboutSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: 'About CropInsurance.co.nz',
+  url: 'https://www.cropinsurance.co.nz/about/',
+  description: 'CropInsurance.co.nz is a free broker referral service connecting NZ growers with specialist crop insurance advisers.',
+  isPartOf: { '@type': 'WebSite', url: 'https://www.cropinsurance.co.nz' },
+  about: {
+    '@type': 'Organization',
+    name: 'CropInsurance.co.nz',
+    url: 'https://www.cropinsurance.co.nz',
+    description: 'NZ specialist crop insurance broker referral and comparison service operated by Cover4You.',
+    email: 'hello@cover4you.co.nz',
+    areaServed: { '@type': 'Country', name: 'New Zealand' },
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.cropinsurance.co.nz/' },
+    { '@type': 'ListItem', position: 2, name: 'About Us', item: 'https://www.cropinsurance.co.nz/about/' },
+  ],
 };
 
 export default function AboutPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section
         className="relative py-20"
         style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1920&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }}

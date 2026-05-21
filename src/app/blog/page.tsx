@@ -6,12 +6,43 @@ export const metadata: Metadata = {
   title: 'Crop Insurance Blog & Guides NZ | CropInsurance.co.nz',
   description: 'Expert guides on crop insurance for NZ growers. Kiwifruit, vineyard, arable, and horticulture insurance explained by specialist advisers.',
   alternates: { canonical: 'https://www.cropinsurance.co.nz/blog/' },
+  openGraph: {
+    title: 'Crop Insurance Blog & Guides NZ | CropInsurance.co.nz',
+    description: 'Expert guides on crop insurance for NZ growers. Kiwifruit, vineyard, arable, and horticulture insurance explained.',
+    url: 'https://www.cropinsurance.co.nz/blog/',
+    siteName: 'CropInsurance.co.nz',
+    images: [{ url: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&q=80', width: 1200, height: 630, alt: 'Crop Insurance Guides NZ' }],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Crop Insurance Blog & Guides NZ',
+    description: 'Expert guides on crop insurance for NZ growers.',
+    images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&q=80'],
+  },
+};
+
+const blogIndexSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Crop Insurance Blog & Guides NZ',
+  url: 'https://www.cropinsurance.co.nz/blog/',
+  description: 'Expert guides on crop insurance for NZ growers.',
+  isPartOf: { '@type': 'WebSite', url: 'https://www.cropinsurance.co.nz' },
+  breadcrumb: {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.cropinsurance.co.nz/' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.cropinsurance.co.nz/blog/' },
+    ],
+  },
 };
 
 export default function BlogIndexPage() {
   const [featured, ...rest] = blogPosts;
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogIndexSchema) }} />
       <section className="bg-green-900 py-16" style={{ backgroundImage: `url(${featured.heroImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-green-950/80" style={{ position: 'relative' }}>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

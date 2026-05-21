@@ -6,11 +6,51 @@ export const metadata: Metadata = {
   title: 'Get a Free Crop Insurance Quote | Contact Us | CropInsurance.co.nz',
   description: 'Contact our specialist crop insurance brokers for a free, no-obligation quote. We compare FMG, Gallagher, Aon, Farmcover and more for NZ growers.',
   alternates: { canonical: 'https://www.cropinsurance.co.nz/contact/' },
+  openGraph: {
+    title: 'Get a Free Crop Insurance Quote | CropInsurance.co.nz',
+    description: 'Contact our specialist crop insurance brokers for a free, no-obligation quote. We compare FMG, Gallagher, Aon, Farmcover and more for NZ growers.',
+    url: 'https://www.cropinsurance.co.nz/contact/',
+    siteName: 'CropInsurance.co.nz',
+    images: [{ url: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&q=80', width: 1200, height: 630, alt: 'Get a Free Crop Insurance Quote' }],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Get a Free Crop Insurance Quote | CropInsurance.co.nz',
+    description: 'Free broker referral — compare FMG, Gallagher, Aon, Farmcover and more.',
+    images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&q=80'],
+  },
+};
+
+const contactSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Get a Free Crop Insurance Quote',
+  url: 'https://www.cropinsurance.co.nz/contact/',
+  description: 'Request a free, no-obligation crop insurance quote from NZ specialist brokers.',
+  isPartOf: { '@type': 'WebSite', url: 'https://www.cropinsurance.co.nz' },
+  mainEntity: {
+    '@type': 'Organization',
+    name: 'CropInsurance.co.nz',
+    email: 'hello@cover4you.co.nz',
+    url: 'https://www.cropinsurance.co.nz',
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.cropinsurance.co.nz/' },
+    { '@type': 'ListItem', position: 2, name: 'Get a Quote', item: 'https://www.cropinsurance.co.nz/contact/' },
+  ],
 };
 
 export default function ContactPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section
         className="relative py-20"
         style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }}

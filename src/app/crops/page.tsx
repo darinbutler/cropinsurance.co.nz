@@ -6,11 +6,42 @@ export const metadata: Metadata = {
   title: 'Crop Insurance Types NZ | All Crops Covered | CropInsurance.co.nz',
   description: 'Specialist crop insurance for kiwifruit, apples, grapes, wheat, hops, stone fruit, avocados, berries and more. Compare NZ crop insurance by crop type.',
   alternates: { canonical: 'https://www.cropinsurance.co.nz/crops/' },
+  openGraph: {
+    title: 'Crop Insurance Types NZ | All Crops Covered | CropInsurance.co.nz',
+    description: 'Specialist crop insurance for kiwifruit, apples, grapes, wheat, hops, stone fruit, avocados, berries and more.',
+    url: 'https://www.cropinsurance.co.nz/crops/',
+    siteName: 'CropInsurance.co.nz',
+    images: [{ url: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1200&q=80', width: 1200, height: 630, alt: 'Crop Insurance Types NZ' }],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Crop Insurance Types NZ | All Crops Covered',
+    description: 'Specialist crop insurance for all NZ crops — compare by crop type.',
+    images: ['https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1200&q=80'],
+  },
+};
+
+const cropsIndexSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Crop Insurance Types NZ',
+  url: 'https://www.cropinsurance.co.nz/crops/',
+  description: 'Specialist crop insurance for all NZ crop types — kiwifruit, apples, grapes, wheat, hops and more.',
+  isPartOf: { '@type': 'WebSite', url: 'https://www.cropinsurance.co.nz' },
+  breadcrumb: {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.cropinsurance.co.nz/' },
+      { '@type': 'ListItem', position: 2, name: 'Crop Types', item: 'https://www.cropinsurance.co.nz/crops/' },
+    ],
+  },
 };
 
 export default function CropsIndexPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(cropsIndexSchema) }} />
       <section className="bg-green-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center gap-2 text-xs text-green-300 mb-4">

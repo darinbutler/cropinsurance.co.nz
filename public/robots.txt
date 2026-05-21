@@ -1,9 +1,10 @@
+# CropInsurance.co.nz — robots.txt
+# Generated: 2026-05-21
+
 User-agent: *
 Allow: /
-Disallow: /thank-you/
-Disallow: /api/
 
-# Block AI training crawlers
+# AI training crawlers — disallow
 User-agent: GPTBot
 Disallow: /
 
@@ -16,4 +17,20 @@ Disallow: /
 User-agent: anthropic-ai
 Disallow: /
 
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+# Sitemap
 Sitemap: https://www.cropinsurance.co.nz/sitemap.xml

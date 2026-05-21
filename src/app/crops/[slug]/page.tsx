@@ -17,6 +17,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${crop.shortName} Insurance NZ | CropInsurance.co.nz`,
     description: crop.description,
     alternates: { canonical: `https://www.cropinsurance.co.nz/crops/${crop.slug}/` },
+    openGraph: {
+      title: `${crop.shortName} Insurance NZ | CropInsurance.co.nz`,
+      description: crop.description,
+      url: `https://www.cropinsurance.co.nz/crops/${crop.slug}/`,
+      siteName: 'CropInsurance.co.nz',
+      images: [{ url: crop.heroImage, width: 1200, height: 630, alt: `${crop.name} Insurance NZ` }],
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${crop.shortName} Insurance NZ | CropInsurance.co.nz`,
+      description: crop.description,
+      images: [crop.heroImage],
+    },
   };
 }
 
@@ -48,10 +62,31 @@ export default async function CropPage({ params }: { params: Promise<{ slug: str
     ],
   };
 
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: `${crop.name} Insurance NZ`,
+    description: crop.longDescription,
+    provider: {
+      '@type': 'Organization',
+      name: 'CropInsurance.co.nz',
+      url: 'https://www.cropinsurance.co.nz',
+    },
+    areaServed: { '@type': 'Country', name: 'New Zealand' },
+    serviceType: 'Crop Insurance Broker Referral',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'NZD',
+      description: 'Free broker referral — no obligation quote',
+    },
+  };
+
   return (
     <>
       {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       {/* Full-bleed Hero */}
       <section
@@ -105,10 +140,19 @@ export default async function CropPage({ params }: { params: Promise<{ slug: str
 
               {/* Long-Form Authoritative Content */}
               {crop.longFormContent && (
-                <div
-                  className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 prose prose-green max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-p:leading-relaxed prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-8 prose-h2:mb-4 prose-h3:text-lg prose-h3:font-bold prose-h3:mt-6 prose-h3:mb-3 prose-ul:space-y-1 prose-li:text-gray-600 prose-strong:text-gray-800 prose-table:text-sm"
-                  dangerouslySetInnerHTML={{ __html: crop.longFormContent }}
-                />
+                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+                  <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100">
+                    <div className="w-9 h-9 rounded-full bg-green-700 flex items-center justify-center text-white text-sm font-bold flex-shrink-0">CI</div>
+                    <div>
+                      <div className="text-sm font-semibold text-gray-900">CropInsurance.co.nz Editorial Team</div>
+                      <div className="text-xs text-gray-500">NZ Crop Insurance Specialists · Updated 2026</div>
+                    </div>
+                  </div>
+                  <div
+                    className="prose prose-green max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-p:leading-relaxed prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-8 prose-h2:mb-4 prose-h3:text-lg prose-h3:font-bold prose-h3:mt-6 prose-h3:mb-3 prose-ul:space-y-1 prose-li:text-gray-600 prose-strong:text-gray-800 prose-table:text-sm"
+                    dangerouslySetInnerHTML={{ __html: crop.longFormContent }}
+                  />
+                </div>
               )}
 
               {/* Coverage Highlights — FIRST, high-contrast standout */}

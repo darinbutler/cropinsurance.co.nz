@@ -4,9 +4,23 @@ import { growerTypes } from '@/data/grower-types';
 import QuoteForm from '@/components/QuoteForm';
 
 export const metadata: Metadata = {
-  title: 'Crop Insurance by Grower Type NZ | Orchardists, Viticulture, Arable & More | CropInsurance.co.nz',
-  description: 'Find specialist crop insurance for orchardists, viticulture growers, arable farmers, hop growers, vegetable growers and contract growers in New Zealand. Compare FMG, Gallagher, Aon and more.',
+  title: 'Crop Insurance by Grower Type NZ | Orchardists, Viticulture & More | CropInsurance.co.nz',
+  description: 'Find specialist crop insurance for orchardists, viticulture growers, arable farmers, hop growers, vegetable growers and contract growers in New Zealand.',
   alternates: { canonical: 'https://www.cropinsurance.co.nz/growers/' },
+  openGraph: {
+    title: 'Crop Insurance by Grower Type NZ | CropInsurance.co.nz',
+    description: 'Specialist crop insurance for orchardists, viticulture growers, arable farmers, hop growers, vegetable growers and contract growers.',
+    url: 'https://www.cropinsurance.co.nz/growers/',
+    siteName: 'CropInsurance.co.nz',
+    images: [{ url: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&q=80', width: 1200, height: 630, alt: 'Crop Insurance by Grower Type NZ' }],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Crop Insurance by Grower Type NZ',
+    description: 'Specialist insurance for orchardists, viticulture, arable farmers and more.',
+    images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&q=80'],
+  },
 };
 
 const growerStats = [
@@ -30,9 +44,26 @@ const coverTypes = [
   { name: 'Parametric Cover', desc: 'Triggers automatically based on a measured index (e.g. rainfall below threshold). No loss assessment needed.', best: 'Arable, drought-prone regions', popular: false },
 ];
 
+const growersIndexSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Crop Insurance by Grower Type NZ',
+  url: 'https://www.cropinsurance.co.nz/growers/',
+  description: 'Specialist crop insurance for orchardists, viticulture growers, arable farmers, hop growers, vegetable growers and contract growers in New Zealand.',
+  isPartOf: { '@type': 'WebSite', url: 'https://www.cropinsurance.co.nz' },
+  breadcrumb: {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.cropinsurance.co.nz/' },
+      { '@type': 'ListItem', position: 2, name: 'Grower Types', item: 'https://www.cropinsurance.co.nz/growers/' },
+    ],
+  },
+};
+
 export default function GrowersIndexPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(growersIndexSchema) }} />
       {/* Hero */}
       <section
         className="relative min-h-[520px] flex items-end"

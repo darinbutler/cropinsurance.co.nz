@@ -9,7 +9,7 @@
   <url><loc>https://www.cropinsurance.co.nz/claims/</loc><lastmod>2026-05-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.cropinsurance.co.nz/about/</loc><lastmod>2026-05-21</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
-  <!-- Crop Type Pages — Canonical Slugs (with -insurance suffix) -->
+  <!-- Crop Type Pages -->
   <url><loc>https://www.cropinsurance.co.nz/crops/</loc><lastmod>2026-05-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.cropinsurance.co.nz/crops/kiwifruit-insurance/</loc><lastmod>2026-05-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.cropinsurance.co.nz/crops/apple-pear-insurance/</loc><lastmod>2026-05-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
@@ -33,7 +33,7 @@
   <url><loc>https://www.cropinsurance.co.nz/growers/vegetable-growers/</loc><lastmod>2026-05-21</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://www.cropinsurance.co.nz/growers/contract-growers/</loc><lastmod>2026-05-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <!-- SEO Landing Pages (by intent and region) -->
+  <!-- SEO Landing Pages (intent + region) -->
   <url><loc>https://www.cropinsurance.co.nz/crop-insurance/cheap/</loc><lastmod>2026-05-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.cropinsurance.co.nz/crop-insurance/compare/</loc><lastmod>2026-05-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.cropinsurance.co.nz/crop-insurance/best/</loc><lastmod>2026-05-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>

@@ -17,6 +17,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: page.metaTitle,
     description: page.metaDescription,
     alternates: { canonical: `https://www.cropinsurance.co.nz/crop-insurance/${page.slug}/` },
+    openGraph: {
+      title: page.metaTitle,
+      description: page.metaDescription,
+      url: `https://www.cropinsurance.co.nz/crop-insurance/${page.slug}/`,
+      siteName: 'CropInsurance.co.nz',
+      images: [{ url: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&q=80', width: 1200, height: 630, alt: page.heroHeading }],
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: page.metaTitle,
+      description: page.metaDescription,
+      images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&q=80'],
+    },
   };
 }
 
@@ -84,8 +98,29 @@ export default async function CropSeoPage({ params }: { params: Promise<{ slug: 
   const page = cropSeoPages.find(p => p.slug === slug);
   if (!page) notFound();
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.cropinsurance.co.nz/' },
+      { '@type': 'ListItem', position: 2, name: page.title, item: `https://www.cropinsurance.co.nz/crop-insurance/${page.slug}/` },
+    ],
+  };
+
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: page.metaTitle,
+    description: page.metaDescription,
+    url: `https://www.cropinsurance.co.nz/crop-insurance/${page.slug}/`,
+    isPartOf: { '@type': 'WebSite', url: 'https://www.cropinsurance.co.nz' },
+    breadcrumb: breadcrumbSchema,
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="bg-green-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center gap-2 text-xs text-green-300 mb-4">

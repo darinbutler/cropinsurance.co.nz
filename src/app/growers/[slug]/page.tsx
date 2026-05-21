@@ -16,6 +16,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${grower.shortName} Crop Insurance NZ | CropInsurance.co.nz`,
     description: grower.description,
     alternates: { canonical: `https://www.cropinsurance.co.nz/growers/${grower.slug}/` },
+    openGraph: {
+      title: `${grower.shortName} Crop Insurance NZ | CropInsurance.co.nz`,
+      description: grower.description,
+      url: `https://www.cropinsurance.co.nz/growers/${grower.slug}/`,
+      siteName: 'CropInsurance.co.nz',
+      images: [{ url: grower.heroImage, width: 1200, height: 630, alt: `${grower.name} Crop Insurance NZ` }],
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${grower.shortName} Crop Insurance NZ | CropInsurance.co.nz`,
+      description: grower.description,
+      images: [grower.heroImage],
+    },
   };
 }
 
@@ -134,10 +148,19 @@ export default async function GrowerPage({ params }: { params: Promise<{ slug: s
 
               {/* Long-Form Authoritative Content */}
               {grower.longFormContent && (
-                <div
-                  className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 prose prose-green max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-p:leading-relaxed prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-8 prose-h2:mb-4 prose-h3:text-lg prose-h3:font-bold prose-h3:mt-6 prose-h3:mb-3 prose-ul:space-y-1 prose-li:text-gray-600 prose-strong:text-gray-800"
-                  dangerouslySetInnerHTML={{ __html: grower.longFormContent }}
-                />
+                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+                  <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100">
+                    <div className="w-9 h-9 rounded-full bg-green-700 flex items-center justify-center text-white text-sm font-bold flex-shrink-0">CI</div>
+                    <div>
+                      <div className="text-sm font-semibold text-gray-900">CropInsurance.co.nz Editorial Team</div>
+                      <div className="text-xs text-gray-500">NZ Crop Insurance Specialists · Updated 2026</div>
+                    </div>
+                  </div>
+                  <div
+                    className="prose prose-green max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-p:leading-relaxed prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-8 prose-h2:mb-4 prose-h3:text-lg prose-h3:font-bold prose-h3:mt-6 prose-h3:mb-3 prose-ul:space-y-1 prose-li:text-gray-600 prose-strong:text-gray-800"
+                    dangerouslySetInnerHTML={{ __html: grower.longFormContent }}
+                  />
+                </div>
               )}
 
               {/* FAQs */}
