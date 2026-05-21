@@ -25,6 +25,16 @@ export default async function GrowerPage({ params }: { params: Promise<{ slug: s
   if (!grower) notFound();
   const others = growerTypes.filter(g => g.slug !== slug);
 
+  const faqSchema = grower.faqs && grower.faqs.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: grower.faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: { '@type': 'Answer', text: faq.a },
+    })),
+  } : null;
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -57,6 +67,7 @@ export default async function GrowerPage({ params }: { params: Promise<{ slug: s
 
   return (
     <>
+      {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <section className="relative min-h-[360px] flex items-end pb-12" style={{ backgroundImage: `url(${grower.heroImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
@@ -120,6 +131,36 @@ export default async function GrowerPage({ params }: { params: Promise<{ slug: s
                   ))}
                 </div>
               </div>
+
+              {/* Long-Form Authoritative Content */}
+              {grower.longFormContent && (
+                <div
+                  className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 prose prose-green max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-p:leading-relaxed prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-8 prose-h2:mb-4 prose-h3:text-lg prose-h3:font-bold prose-h3:mt-6 prose-h3:mb-3 prose-ul:space-y-1 prose-li:text-gray-600 prose-strong:text-gray-800"
+                  dangerouslySetInnerHTML={{ __html: grower.longFormContent }}
+                />
+              )}
+
+              {/* FAQs */}
+              {grower.faqs && grower.faqs.length > 0 && (
+                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+                  <div className="space-y-3">
+                    {grower.faqs.map((faq, i) => (
+                      <details key={i} className="group border border-gray-200 rounded-xl overflow-hidden">
+                        <summary className="flex justify-between items-center px-5 py-4 cursor-pointer bg-gray-50 hover:bg-green-50 transition-colors list-none">
+                          <h3 className="font-semibold text-gray-900 text-sm pr-4">{faq.q}</h3>
+                          <svg className="w-4 h-4 text-gray-500 flex-shrink-0 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </summary>
+                        <div className="px-5 py-4 border-t border-gray-100">
+                          <p className="text-sm text-gray-600 leading-relaxed">{faq.a}</p>
+                        </div>
+                      </details>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
 
             <div className="space-y-5">
