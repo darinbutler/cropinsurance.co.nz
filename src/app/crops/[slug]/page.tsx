@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const crop = cropTypes.find(c => c.slug === slug);
   if (!crop) return {};
   return {
-    title: `${crop.name} NZ | Compare Quotes | CropInsurance.co.nz`,
+    title: `${crop.shortName} Insurance NZ | CropInsurance.co.nz`,
     description: crop.description,
     alternates: { canonical: `https://www.cropinsurance.co.nz/crops/${crop.slug}/` },
   };
@@ -102,6 +102,14 @@ export default async function CropPage({ params }: { params: Promise<{ slug: str
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">About {crop.name}</h2>
                 <p className="text-gray-600 leading-relaxed">{crop.longDescription}</p>
               </div>
+
+              {/* Long-Form Authoritative Content */}
+              {crop.longFormContent && (
+                <div
+                  className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 prose prose-green max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-p:leading-relaxed prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-8 prose-h2:mb-4 prose-h3:text-lg prose-h3:font-bold prose-h3:mt-6 prose-h3:mb-3 prose-ul:space-y-1 prose-li:text-gray-600 prose-strong:text-gray-800 prose-table:text-sm"
+                  dangerouslySetInnerHTML={{ __html: crop.longFormContent }}
+                />
+              )}
 
               {/* Coverage Highlights — FIRST, high-contrast standout */}
               <div className="rounded-2xl overflow-hidden shadow-md border-2 border-green-500">

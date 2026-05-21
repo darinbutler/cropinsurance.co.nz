@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const grower = growerTypes.find(g => g.slug === slug);
   if (!grower) return {};
   return {
-    title: `${grower.name} | Crop Insurance NZ | CropInsurance.co.nz`,
+    title: `${grower.shortName} Crop Insurance NZ | CropInsurance.co.nz`,
     description: grower.description,
     alternates: { canonical: `https://www.cropinsurance.co.nz/growers/${grower.slug}/` },
   };

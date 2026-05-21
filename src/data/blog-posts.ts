@@ -1,6 +1,7 @@
 export interface BlogPost {
   slug: string;
   title: string;
+  metaTitle?: string;
   excerpt: string;
   content: string;
   publishDate: string;
@@ -15,6 +16,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'nz-crop-insurance-guide-2026',
     title: 'NZ Crop Insurance Guide 2026: What Every Grower Needs to Know',
+    metaTitle: 'NZ Crop Insurance Guide 2026',
     excerpt: 'A comprehensive overview of crop insurance options in New Zealand — from named perils cover to multi-peril revenue protection — and how to choose the right policy for your operation.',
     publishDate: '2026-04-10',
     readTime: 9,
@@ -72,6 +74,7 @@ Using a broker like our partner network at CropInsurance.co.nz gives you access 
   {
     slug: 'kiwifruit-insurance-psa-weather',
     title: 'Kiwifruit Insurance: Protecting Your Orchard from PSA and Weather Events',
+    metaTitle: 'Kiwifruit Insurance NZ: PSA & Weather Events',
     excerpt: 'PSA devastated NZ kiwifruit orchards a decade ago. Here\'s how insurance can protect against disease, hail, frost, and weather events for today\'s kiwifruit growers.',
     publishDate: '2026-03-28',
     readTime: 7,
@@ -118,6 +121,7 @@ Given the complexity of kiwifruit insurance, we strongly recommend working with 
   {
     slug: 'vineyard-frost-insurance-nz',
     title: 'Vineyard Insurance: What\'s Covered When Frost Hits Your Grapes?',
+    metaTitle: 'Vineyard Frost Insurance NZ: What\'s Covered?',
     excerpt: 'Frost at budburst can destroy an entire vintage in a single night. Here\'s how NZ viticulture insurance protects Marlborough and Hawke\'s Bay vine growers.',
     publishDate: '2026-03-15',
     readTime: 6,
@@ -161,6 +165,7 @@ Vineyard insurance premiums vary significantly based on variety, region, and fro
   {
     slug: 'named-perils-vs-multi-peril-crop-insurance',
     title: 'Named Perils vs. Multi-Peril Crop Insurance: Which Is Right for You?',
+    metaTitle: 'Named Perils vs Multi-Peril Crop Insurance',
     excerpt: 'The two main types of crop insurance in NZ explained — and a framework to help you decide which gives you the best protection for your operation.',
     publishDate: '2026-03-01',
     readTime: 8,
@@ -216,6 +221,7 @@ The best approach is to have a frank conversation with a specialist crop insuran
   {
     slug: 'hailstorm-insurance-nz-orchards',
     title: 'Hailstorm Insurance for NZ Orchards: The Complete Guide',
+    metaTitle: 'Hailstorm Insurance for NZ Orchards',
     excerpt: 'Hail is the single biggest insured risk for NZ orchardists. Here\'s everything you need to know about hail cover for kiwifruit, apples, cherries and other horticultural crops.',
     publishDate: '2026-02-20',
     readTime: 7,
@@ -259,6 +265,7 @@ Hail insurance must be in place before a hail event occurs — this seems obviou
   {
     slug: 'climate-change-nz-crop-insurance-premiums',
     title: 'How Climate Change Is Affecting NZ Crop Insurance Premiums',
+    metaTitle: 'Climate Change & NZ Crop Insurance Premiums',
     excerpt: 'Cyclone Gabrielle, unprecedented frosts, and shifting rainfall patterns — how climate change is reshaping the NZ crop insurance landscape and what growers can expect to pay.',
     publishDate: '2026-02-05',
     readTime: 6,
@@ -294,6 +301,7 @@ In a hardening insurance market, an experienced rural insurance broker becomes e
   {
     slug: 'crop-insurance-small-scale-growers-nz',
     title: 'Crop Insurance for Small-Scale Growers: Is It Worth It?',
+    metaTitle: 'Crop Insurance for Small NZ Growers: Worth It?',
     excerpt: 'You don\'t need to be running a commercial orchard to benefit from crop insurance. Here\'s how smaller NZ growers can get cost-effective cover.',
     publishDate: '2026-01-22',
     readTime: 5,
@@ -333,6 +341,7 @@ Our broker network works with growers at all scales. Use our quote form to descr
   {
     slug: 'how-to-make-crop-insurance-claim-nz',
     title: 'How to Make a Crop Insurance Claim After a Weather Event',
+    metaTitle: 'How to Make a Crop Insurance Claim in NZ',
     excerpt: 'Step-by-step guide to making a crop insurance claim in New Zealand — from initial notification to settlement.',
     publishDate: '2026-01-10',
     readTime: 6,
@@ -384,6 +393,7 @@ Once assessment is complete, the insurer will provide a settlement offer. Review
   {
     slug: 'comparing-nz-crop-insurance-providers',
     title: 'FMG vs. Aon vs. Gallagher: Comparing NZ Crop Insurance Providers',
+    metaTitle: 'FMG vs Aon vs Gallagher: NZ Crop Insurance',
     excerpt: 'An independent comparison of the main crop insurance providers in New Zealand — coverage, service, and value for NZ growers.',
     publishDate: '2025-12-20',
     readTime: 8,
@@ -435,6 +445,7 @@ There is no single "best" crop insurer — the right choice depends on your scal
   {
     slug: 'extreme-weather-nz-crop-insurance',
     title: 'Extreme Weather and NZ Crop Insurance: What Growers Need to Know',
+    metaTitle: 'Extreme Weather & NZ Crop Insurance Guide',
     excerpt: 'From Cyclone Gabrielle to Canterbury droughts — extreme weather is reshaping how NZ growers think about crop insurance. Here is what cover is available and what the gaps are.',
     publishDate: '2026-04-20',
     readTime: 8,
@@ -513,6 +524,7 @@ Our specialist brokers can run a pre-season policy review at no cost. Contact us
   {
     slug: 'crop-insurance-costs-nz-2026',
     title: 'How Much Does Crop Insurance Cost in NZ? A 2026 Premium Guide',
+    metaTitle: 'Crop Insurance Costs NZ 2026: Premium Guide',
     excerpt: 'Crop insurance premiums in NZ vary widely depending on crop type, region, coverage level and claims history. Here is a detailed breakdown of what NZ growers can expect to pay in 2026.',
     publishDate: '2026-04-22',
     readTime: 7,
@@ -605,6 +617,7 @@ The only way to know what you will actually pay is to request quotes. Our specia
   {
     slug: 'export-crop-logistics-insurance-nz',
     title: 'Export Crops, Logistics and Insurance: How Global Disruption Affects NZ Growers',
+    metaTitle: 'Export Crops & Logistics Insurance for NZ Growers',
     excerpt: 'NZ export crop growers face risks beyond the farm gate. Shipping disruptions, geopolitical tensions, and logistics failures can be just as costly as a weather event. Here is what insurance covers — and what it does not.',
     publishDate: '2026-04-25',
     readTime: 9,
@@ -688,6 +701,7 @@ Our specialist brokers work across both crop insurance and marine cargo and can 
   {
     slug: 'nz-crop-insurance-premium-trends-2026',
     title: 'Why NZ Crop Insurance Premiums Are Rising — and What Growers Can Do About It',
+    metaTitle: 'NZ Crop Insurance Premium Trends 2026',
     excerpt: 'Crop insurance premiums across New Zealand have increased significantly in recent seasons. We explain the drivers behind rising costs and practical steps growers can take to manage them.',
     publishDate: '2026-04-27',
     readTime: 6,

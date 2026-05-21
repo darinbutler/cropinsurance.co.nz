@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = blogPosts.find(p => p.slug === slug);
   if (!post) return {};
   return {
-    title: `${post.title} | CropInsurance.co.nz`,
+    title: `${post.metaTitle || post.title.substring(0, 44)} | CropInsurance.co.nz`,
     description: post.excerpt,
     alternates: { canonical: `https://www.cropinsurance.co.nz/blog/${post.slug}/` },
     openGraph: {
