@@ -120,7 +120,7 @@ export default function Footer() {
             <h3 className="text-white font-semibold text-xs uppercase tracking-wider mb-3 mt-5">Industry &amp; Regulators</h3>
             <ul className="space-y-1.5">
               {[
-                ['ICNZ', 'https://www.icnz.org.nz/'],
+                ['FSPR', 'https://www.companiesoffice.govt.nz/all-registers/financial-service-providers/'],
                 ['FMA', 'https://www.fma.govt.nz/'],
                 ['FSCL', 'https://www.fscl.org.nz/'],
                 ['IFSO Scheme', 'https://www.ifso.nz/'],
