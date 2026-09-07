@@ -3,7 +3,7 @@ export default function TrustBar() {
     { icon: '🌿', label: 'NZ Crop Specialists' },
     { icon: '🤝', label: 'Free Broker Advice' },
     { icon: '⚡', label: 'Fast Turnaround' },
-    { icon: '🔒', label: 'Fair Practice Standard' },
+    { icon: '🔒', label: 'FSP Registered' },
     { icon: '🌾', label: 'We Compare Leading Insurers' },
     { icon: '📋', label: 'No Obligation Quotes' },
   ];

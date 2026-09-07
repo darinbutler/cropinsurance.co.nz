@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Making a Crop Insurance Claim NZ | CropInsurance.co.nz',
-  description: 'How to make a crop insurance claim in New Zealand. Step-by-step guide, insurer contacts, complaints process, and ICNZ Fair Code information.',
+  description: 'How to make a crop insurance claim in New Zealand. Step-by-step guide, insurer contacts, complaints process, and FSP Registered information.',
   alternates: { canonical: 'https://www.cropinsurance.co.nz/claims/' },
 };
 
@@ -98,7 +98,7 @@ export default function ClaimsPage() {
           {/* Complaints */}
           <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6">
             <h2 className="text-xl font-bold text-gray-900 mb-4">Complaints</h2>
-            <p className="text-sm text-gray-700 mb-3 leading-relaxed">If you need to complain about an insurer, contact them directly first. Most ICNZ member insurers commit to acknowledging complaints within 5 business days and responding substantively within 10 business days.</p>
+            <p className="text-sm text-gray-700 mb-3 leading-relaxed">If you need to complain about an insurer, contact them directly first. Most many insurers commit to acknowledging complaints within 5 business days and responding substantively within 10 business days.</p>
             <p className="text-sm text-gray-700 mb-4 leading-relaxed">If your complaint is not resolved, you can escalate it to the insurer&apos;s dispute resolution scheme — either Financial Services Complaints Limited (FSCL) or the Insurance and Financial Services Ombudsman (IFSO) Scheme. Your insurer will tell you which one applies to them.</p>
             <ul className="space-y-1 text-sm text-gray-700">
               <li>• <strong>FSCL</strong> (Financial Services Complaints Ltd): <a href="tel:08003472573" className="text-green-700 font-medium">0800 347 257</a></li>
